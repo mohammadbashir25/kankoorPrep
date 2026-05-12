@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap");
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme{
+
+    /* main brand colors */
+    --color-primary: #1f6fd6;  /* primary buttons,active nav key highlights */
+    --color-primary-hover: #1a5fc0; /* primary buttons hover state */
+
+    
+    /* accent colors */
+
+    --color-accent: #4fc3f7;  /* charts icons progressbars focus indicators */
+
+    /* Background system  */
+
+    --bg-section: #f5faff;  /* section  background */
+    --bg-section-dark: #0b253f;  /* section  background */
+}
+
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+}
+
+h1, h2, h3, a{
+  font-family: 'Poppins', sans-serif;
+}
+p{
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+.poppins{
+  font-family: 'Poppins';
+}
+.roboto{
+  font-family: 'roboto', Arial, Helvetica, sans-serif;
+}
+.active{
+  @apply text-primary hover:text-primary-hover relative
+}
+.active::after{
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  border-radius: 999px;
+  background: #3b82f6;
+  height: 2px;
+}
+.active::after{
+  bottom: -5px;
+}
