@@ -8,6 +8,7 @@ import FaqList from "../components/FaqList";
 import Pricing from "../components/Pricing";
 import Contact from '../components/Contact'
 import Footer from '../components/Footer'
+import Reveal from '../components/motion/Reveal'
 
 const MainLayout = ({ toggleDarkMode, darkMode }) => {
   return (
@@ -18,23 +19,27 @@ const MainLayout = ({ toggleDarkMode, darkMode }) => {
       <section id="home">
         <Home />
       </section>
-      <section id="howWorks">
+      <Reveal as="section" id="howWorks">
         <HowWorks />
-      </section>
-      <Supported />
-      <Features />
-      <section id="mock_test">
+      </Reveal>
+      <Reveal>
+        <Supported />
+      </Reveal>
+      <Reveal>
+        <Features />
+      </Reveal>
+      <Reveal as="section" id="mock_test">
         <Mock_Test />
-      </section>
-      <section id="pricing">
+      </Reveal>
+      <Reveal as="section" id="pricing">
         <Pricing />
-      </section>
-      <section id="faqs">
+      </Reveal>
+      <Reveal as="section" id="faqs">
         <FaqList />
-      </section>
-      <section id="contact">
+      </Reveal>
+      <Reveal as="section" id="contact">
         <Contact />
-      </section>
+      </Reveal>
       <Footer />
     </div>
   );
