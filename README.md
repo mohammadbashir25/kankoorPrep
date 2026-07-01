@@ -1,4 +1,4 @@
-I designed and developed a modern, fully responsive landing page for an online exam and mock test platform using React and Tailwind CSS.
+I designed and developed a modern, fully responsive landing page for an online exam and mock test platform using React, Framer Motion and Tailwind CSS.
 
 The project includes a clean hero section, feature highlights, pricing section, FAQ section, and contact area. It supports dark mode and is optimized for all screen sizes.
 
